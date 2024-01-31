@@ -23,17 +23,10 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap/scss/bootstrap.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles.scss",
-                "node_modules/bootstrap/scss/bootstrap.scss"
-              ]
+              "includePaths": ["src/styles.scss"]
             },
-            "scripts": ["node_modules/bootstrap/js/index.esm.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {

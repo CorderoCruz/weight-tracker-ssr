@@ -1,0 +1,7 @@
+<section>
+  @for(link of links; track $index) {
+  <button>
+    <a routerLink="/{{ link }}">{{ link | titlecase }} Dashboard</a>
+  </button>
+  }
+</section>
