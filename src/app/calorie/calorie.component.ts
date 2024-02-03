@@ -10,12 +10,12 @@ import { DateService } from './services/date.service';
   providers: [CalorieService, DateService],
 })
 export class CalorieComponent implements OnInit {
-  private calorieService = inject<CalorieService>(CalorieService);
-  private dateService = inject<DateService>(DateService);
-
   constructor() {
     this.calories = toSignal(this.calorieService.getWeeklyCalorieTotal(1));
   }
+
+  private calorieService = inject<CalorieService>(CalorieService);
+  private dateService = inject<DateService>(DateService);
 
   public calories: Signal<number | undefined>;
 
