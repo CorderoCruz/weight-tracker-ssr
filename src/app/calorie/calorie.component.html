@@ -1,6 +1,8 @@
+@defer (when vm$ | async) { @if(vm$ | async; as vm) {
 <div class="container">
-  <h2>Weekly Calories: {{ calories() }}</h2>
+  <h2>Weekly Calories: {{ vm.caloriesLeft }}</h2>
 </div>
+} } @loading { loading } @error { error }
 
 <div class="week-button-container">
   <button>Previous week</button>
